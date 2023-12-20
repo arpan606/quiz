@@ -1,0 +1,52 @@
+.header-component {
+    border: 100vw;
+    min-height: 45vh;
+    background-color: #383838;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+    padding: 2% 0;
+    box-sizing: border-box;
+
+
+    .title {
+        font-size: 20px;
+        font-weight: 800;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            margin-right: 5px;
+        }
+    }
+
+    .heading-section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .bold {
+        font-size: 60px;
+        font-weight: 800;
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    h1,
+    h3 {
+        margin: 0;
+    }
+
+    h1 {
+        letter-spacing: 10px;
+    }
+
+    .break-color {
+        color: #ED9EB7;
+    }
+}
