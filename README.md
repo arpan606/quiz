@@ -22,3 +22,6 @@ npm run start
 
 This command will start the development server and make your application accessible at http://localhost:3000 (or another port if specified in the project).
 Open your web browser and navigate to the provided URL to see the project in action.
+
+### Live Link
+https://6582d8fce2582c04afe19c59--comfy-lily-c4373f.netlify.app/
