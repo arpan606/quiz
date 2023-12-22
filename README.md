@@ -24,4 +24,4 @@ This command will start the development server and make your application accessi
 Open your web browser and navigate to the provided URL to see the project in action.
 
 ### Live Link
-https://6582d8fce2582c04afe19c59--comfy-lily-c4373f.netlify.app/
+https://6585b7cb1eb607ed66c8ba02--comfy-lily-c4373f.netlify.app
