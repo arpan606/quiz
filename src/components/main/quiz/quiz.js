@@ -21,6 +21,7 @@ const Quiz = () => {
    const [expired, setExpired] = useState(false);
    const [autoSubmit,setAutoSubmit]=useState(false);
    const navigate = useNavigate();
+   const [responseIcon,setResponseIcon]=useState("NONE");
 
   useEffect(() => {
     if(currentQuestionIndex>0 && currentQuestionIndex<=totalCount && !question[currentQuestionIndex-1].isMarked)
@@ -74,6 +75,23 @@ const Quiz = () => {
         navigate('/');
     };
 
+    useEffect(() => {
+        if (currentQuestionIndex > 0) {
+
+
+            if(question[currentQuestionIndex - 1].isMarked)
+            {
+                if(question[currentQuestionIndex - 1].selectedOption === question[currentQuestionIndex - 1].correctAnswer)
+                {
+                    setResponseIcon('SMILEY');
+                }else{
+                    setResponseIcon('NONSMILEY');
+                }
+            }
+      
+        }
+      }, [currentQuestionIndex, question]);
+
 
 
   return !!loading ? <Loader/>
@@ -84,7 +102,11 @@ const Quiz = () => {
             <div className="home-icon" onClick={()=>{routeChange('')}}><FaHome color="white" size={40}/></div>
             <div className='main-section'>
                 <div className="countdown-timer">
-                  <div className="count">{time}</div>
+                  <div className="count">
+                    {responseIcon==='NONE' && time}
+                    {responseIcon==='SMILEY' && <div className="smiley-icon"><GoSmiley/></div>}
+                    {responseIcon==='NONSMILEY' &&<div className="smiley-icon"><FaRegSadCry /></div>}
+                  </div>
                 </div>
                 <div className="score">SCORE:{score}</div>
                 <div className='heading'>
